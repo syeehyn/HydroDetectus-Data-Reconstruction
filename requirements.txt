@@ -1,0 +1,11 @@
+pandas
+scikit-learn
+numpy
+seaborn
+spacy
+beautifulsoup4
+ipykernel
+ipython
+bokeh
+tqdm
+psutil

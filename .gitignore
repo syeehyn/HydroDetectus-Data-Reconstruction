@@ -7,9 +7,11 @@ __pycache__/
 *.so
 
 # Distribution / packaging
+*/*-dev.ipynb
+*/*-dev.py
 .Python
 credential/
-data/
+/data/*
 build/
 develop-eggs/
 dist/
