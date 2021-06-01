@@ -1,24 +1,24 @@
-import geopandas as gpd
+# import geopandas as gpd
 import pandas as pd
-from shapely.geometry import Point
+# from shapely.geometry import Point
 
-def convert_gpd(station_info, lat_col, lon_col, crs=4269):
-    """convert station info Pandas DataFrame into GeoPandas DataFrame
+# def convert_gpd(station_info, lat_col, lon_col, crs=4269):
+#     """convert station info Pandas DataFrame into GeoPandas DataFrame
 
-    Args:
-        station_info (pd.DataFrame): pandas station information DataFrame
-        lat_col (string): latitude column name
-        lon_col (string): longitude column name
+#     Args:
+#         station_info (pd.DataFrame): pandas station information DataFrame
+#         lat_col (string): latitude column name
+#         lon_col (string): longitude column name
 
-    Returns:
-        gpd.GeoDataFrame: GeoPandas DataFrame of station info
-    """    
-    df = station_info.copy()
-    get_geometry = lambda x, lon, lat: Point(x[lon], x[lat])
-    df['geometry'] = df.apply(lambda x: get_geometry(x, lon_col, lat_col), axis = 1)
+#     Returns:
+#         gpd.GeoDataFrame: GeoPandas DataFrame of station info
+#     """    
+#     df = station_info.copy()
+#     get_geometry = lambda x, lon, lat: Point(x[lon], x[lat])
+#     df['geometry'] = df.apply(lambda x: get_geometry(x, lon_col, lat_col), axis = 1)
 
-    return gpd.GeoDataFrame(df, crs={'init':f'epsg:{crs}'}, \
-                            geometry='geometry')
+#     return gpd.GeoDataFrame(df, crs={'init':f'epsg:{crs}'}, \
+#                             geometry='geometry')
 def split_sequences(sequences):
     """split sequence into sequences of continues list
 
